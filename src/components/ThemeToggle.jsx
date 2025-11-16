@@ -4,6 +4,7 @@ import { cn } from "../lib/utils";
 
 export const ThemeToggle = () => {
 	const [isDarkMode, setIsDarkMode] = useState(false);
+	const [isScrolled, setIsScrolled] = useState(false);
 
 	useEffect(() => {
 		const storedTheme = localStorage.getItem("theme");
@@ -14,6 +15,15 @@ export const ThemeToggle = () => {
 			localStorage.setItem("theme", "light");
 			setIsDarkMode(false);
 		}
+	}, []);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			setIsScrolled(window.scrollY > 10);
+		};
+
+		window.addEventListener("scroll", handleScroll);
+		return () => window.removeEventListener("scroll", handleScroll);
 	}, []);
 
 	const toggleTheme = () => {
@@ -32,9 +42,12 @@ export const ThemeToggle = () => {
 		<button
 			onClick={toggleTheme}
 			className={cn(
-				"fixed top-5 right-5 z-50 p-2 rounded-full transition-colors duration-300",
+				"fixed top-5 right-20 md:right-5 z-50 p-2 rounded-full transition-colors duration-300",
 				"focus:outline-none",
-				"hover:bg-gray-200 dark:hover:bg-gray-800"
+				"hover:bg-gray-200 dark:hover:bg-gray-800",
+				isScrolled
+					? "top-3 transition-all duration-300"
+					: "top-5 transition-all duration-300"
 			)}
 			aria-label="Toggle theme"
 		>
