@@ -4,10 +4,10 @@ const projects = [
 	{
 		id: 1,
 		title: "Brownies Browcious",
-		description: "E-Commerce website Brownies Browcious.",
+		description: "E-Commerce website Brownies Browcious. Used for my final project in college",
 		image: "/projects/project1.jpg",
 		tags: ["React", "Node.Js", "MongoDB"],
-		demoUrl: "#",
+		demoUrl: "https://brownies-browcious.store",
 		githubUrl: "https://github.com/IpTul/E-Commerce-Brownies",
 	},
 	{
@@ -17,18 +17,8 @@ const projects = [
 		image: "/projects/project2.png",
 		tags: ["Laravel", "MySql"],
 		demoUrl: "https://catering-rosyanti.store",
-		githubUrl: "#",
+		githubUrl: "#https://github.com/IpTul/food-catering",
 	},
-	// {
-	//   id: 3,
-	//   title: "E-commerce Platform",
-	//   description:
-	//     "Full-featured e-commerce platform with user authentication and payment processing.",
-	//   image: "/projects/project3.png",
-	//   tags: ["React", "Node.js", "Stripe"],
-	//   demoUrl: "#",
-	//   githubUrl: "#",
-	// },
 ];
 
 export const ProjectsSection = () => {
@@ -68,7 +58,7 @@ export const ProjectsSection = () => {
 									))}
 								</div>
 
-								<h3 className="text-xl font-semibold mb-1"> {project.title}</h3>
+								<h3 className="text-xl font-bold mb-1 text-primary"> {project.title}</h3>
 								<p className="text-muted-foreground text-sm mb-4">
 									{project.description}
 								</p>

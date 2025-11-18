@@ -55,7 +55,7 @@ export const ContactSection = () => {
                   <Mail className="h-6 w-6 text-primary" />{" "}
                 </div>
                 <div>
-                  <h4 className="font-medium"> Email</h4>
+                  <h4 className="font-bold text-left"> Email</h4>
                   <a
                     href="mailto:lthfrhmn21@gmail.com"
                     className="text-muted-foreground hover:text-primary transition-colors"
@@ -83,7 +83,7 @@ export const ContactSection = () => {
                   <MapPin className="h-6 w-6 text-primary" />{" "}
                 </div>
                 <div>
-                  <h4 className="font-medium"> Location</h4>
+                  <h4 className="font-bold text-left"> Location</h4>
                   <a className="text-muted-foreground hover:text-primary transition-colors" href="#">
                     Samarinda, Kalimantan Timur, Indonesia
                   </a>
@@ -114,7 +114,8 @@ export const ContactSection = () => {
             className="bg-card p-8 rounded-lg shadow-xs"
             onSubmit={handleSubmit}
           >
-            <h3 className="text-2xl font-semibold mb-6"> Send a Message</h3>
+            <h3 className="text-2xl font-semibold"> Send a Message</h3>
+            <p className="text-xs mb-6 text-red-600">Currently not working</p>
 
             <form className="space-y-6">
               <div>

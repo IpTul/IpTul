@@ -1,4 +1,4 @@
-import { Code } from "lucide-react";
+import { User, Map, PinIcon, School, School2, Briefcase } from "lucide-react";
 
 export const AboutSection = () => {
 	return (
@@ -38,7 +38,20 @@ export const AboutSection = () => {
 
 					<div className="grid grid-cols-1 gap-6">
 						<div className="gradient-border p-6 card-hover">
-							{/* <div className="flex items-start gap-4">
+							<div className="flex items-start gap-4">
+								<div className="p-3 rounded-full bg-primary/10">
+									<School className="h-6 w-6 text-primary" />
+								</div>
+								<div className="text-left">
+									<h4 className="font-semibold text-lg">College</h4>
+									<p className="text-muted-foreground">
+										Studied at Samarinda State Polytechnic 2021 - 2025, majoring in D4 Information Technology. Graduated with honors.
+									</p>
+								</div>
+							</div>
+						</div>
+						{/* <div className="gradient-border p-6 card-hover">
+							<div className="flex items-start gap-4">
 								<div className="p-3 rounded-full bg-primary/10">
 									<Code className="h-6 w-6 text-primary" />
 								</div>
@@ -49,31 +62,31 @@ export const AboutSection = () => {
 										modern frameworks.
 									</p>
 								</div>
-							</div> */}
+							</div> 
 							<img src="/projects/IpTul.jpg" alt="IpTul" />
+						</div> */}
+						<div className="gradient-border p-6 card-hover">
+							<div className="flex items-start gap-4">
+								<div className="p-3 rounded-full bg-primary/10">
+									<School2 className="h-6 w-6 text-primary" />
+								</div>
+								<div className="text-left">
+									<h4 className="font-semibold text-lg">Senior High School</h4>
+									<p className="text-muted-foreground">Studied at SMK Negeri 7 Samarinda 2018 - 2021, majoring in Software Engineering.</p>
+								</div>
+							</div>
 						</div>
 						{/* <div className="gradient-border p-6 card-hover">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <User className="h-6 w-6 text-primary" />
-                </div>
-                <div className="text-left">
-                  <h4 className="font-semibold text-lg"> Web Development</h4>
-                  <p className="text-muted-foreground">Creating responsive websites and web applications with modern frameworks.</p>
-                </div>
-              </div>
-            </div>
-            <div className="gradient-border p-6 card-hover">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Briefcase className="h-6 w-6 text-primary" />
-                </div>
-                <div className="text-left">
-                  <h4 className="font-semibold text-lg"> Web Development</h4>
-                  <p className="text-muted-foreground">Creating responsive websites and web applications with modern frameworks.</p>
-                </div>
-              </div>
-            </div> */}
+							<div className="flex items-start gap-4">
+								<div className="p-3 rounded-full bg-primary/10">
+									<Briefcase className="h-6 w-6 text-primary" />
+								</div>
+								<div className="text-left">
+									<h4 className="font-semibold text-lg"> Web Development</h4>
+									<p className="text-muted-foreground">Creating responsive websites and web applications with modern frameworks.</p>
+								</div>
+							</div>
+						</div> */}
 					</div>
 				</div>
 			</div>
