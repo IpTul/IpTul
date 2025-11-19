@@ -137,7 +137,7 @@ export const ContactSection = () => {
             onSubmit={handleSubmit}
           >
             <h3 className="text-2xl font-semibold"> Send a Message</h3>
-            <p className="text-xs mb-6 text-red-600">Currently not working</p>
+            {/* <p className="text-xs mb-6 text-red-600">Currently not working</p> */}
 
             <form className="space-y-6">
               <div>
