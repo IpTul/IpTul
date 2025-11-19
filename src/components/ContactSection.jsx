@@ -12,6 +12,7 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 // import { useToast } from "../hooks/use-toast";
 import { useToast } from "@/hooks/use-toast"
+import emailjs from "emailjs-com";
 
 export const ContactSection = () => {
   const { toast } = useToast();
@@ -19,16 +20,37 @@ export const ContactSection = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     setIsSubmitting(true);
 
-    setTimeout(() => {
-      toast({
-        title: "Message sent!",
-        description: "Thank you for your message. I'll get back to you soon.",
-      });
-      setIsSubmitting(false);
-    }, 1500);
+    emailjs.sendForm(
+      "service_n2n8ol5",
+      "template_gz9x6y8",
+      e.target,
+      "rv7vE9MS-i1HFiCzl"
+    ).then(
+      () => {
+        toast({
+          title: "Message sent!",
+          description: "Thank you for your message!",
+        });
+        setIsSubmitting(false);
+      },
+      (error) => {
+        toast({
+          title: "Error",
+          description: "Failed to send message.",
+        });
+        setIsSubmitting(false);
+      }
+    );
+
+    // setTimeout(() => {
+    //   toast({
+    //     title: "Message sent!",
+    //     description: "Thank you for your message. I'll get back to you soon.",
+    //   });
+    //   setIsSubmitting(false);
+    // }, 1500);
   };
   return (
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
@@ -131,7 +153,6 @@ export const ContactSection = () => {
                   id="name"
                   name="name"
                   required
-                  disabled
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
                   placeholder="IpTul..."
                 />
@@ -150,7 +171,6 @@ export const ContactSection = () => {
                   id="email"
                   name="email"
                   required
-                  disabled
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
                   placeholder="iptul@gmail.com"
                 />
@@ -168,13 +188,12 @@ export const ContactSection = () => {
                   id="message"
                   name="message"
                   required
-                  disabled
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary resize-none"
                   placeholder="Hello, I'd like to talk about..."
                 />
               </div>
 
-              {/* <button
+              <button
                 type="submit"
                 disabled={isSubmitting}
                 className={cn(
@@ -183,7 +202,7 @@ export const ContactSection = () => {
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
                 <Send size={16} />
-              </button> */}
+              </button>
             </form>
           </div>
         </div>
