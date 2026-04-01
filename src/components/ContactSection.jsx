@@ -127,11 +127,12 @@ export const ContactSection = () => {
                   <div className="p-2.5 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
                     <Icon size={18} className="text-primary" />
                   </div>
-                  <div className="min-w-0">
+                  {/* <div className="flex-1 text-center"> */}
+                  <div className="flex-1 text-left">
                     <p className="text-xs text-muted-foreground/60 uppercase tracking-widest mb-0.5">
                       {label}
                     </p>
-                    <p className="text-sm font-medium text-foreground truncate">{value}</p>
+                    <p className="text-sm font-medium text-foreground">{value}</p>
                   </div>
                 </a>
               ))}
@@ -171,7 +172,7 @@ export const ContactSection = () => {
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
               </span>
               <p className="text-xs text-emerald-400 font-medium">
-                Available for freelance & collaboration
+                Open to work · Freelance & Collab
               </p>
             </div>
           </div>
