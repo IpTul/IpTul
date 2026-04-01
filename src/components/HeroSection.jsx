@@ -1,9 +1,9 @@
 import { ArrowDown, Github, Instagram, Linkedin, Twitter } from "lucide-react";
 
 const SOCIAL_LINKS = [
-  { icon: Github, href: "https://github.com/iptul", label: "GitHub" },
-  { icon: Instagram, href: "https://instagram.com/iptul", label: "Instagram" },
-  { icon: Linkedin, href: "https://linkedin.com/in/iptul", label: "LinkedIn" },
+  { icon: Github, href: "https://github.com/iptul/", label: "GitHub" },
+  { icon: Instagram, href: "https://instagram.com/iptul/", label: "Instagram" },
+  { icon: Linkedin, href: "https://linkedin.com/in/m-luthfi-rahman/", label: "LinkedIn" },
 ];
 
 const ROLES = ["Junior Programmer", "Video Editor", "UI Explorer"];
@@ -57,7 +57,15 @@ export const HeroSection = () => {
               style={{ animation: "fadeSlideUp 0.5s ease-out 0.35s both" }}
             >
               My real name is{" "}
-              <span className="text-primary font-medium">Muhammad Luthfi Rahman</span>
+              
+              <a
+                href="https://linkedin.com/in/m-luthfi-rahman/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:underline"
+              >
+                <span className="text-primary font-medium">Muhammad Luthfi Rahman</span>
+              </a>
               , known as IpTul. You can call me bae if you want — whatever makes
               you happy, I guess 😄
             </p>

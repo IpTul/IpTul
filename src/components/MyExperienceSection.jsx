@@ -223,7 +223,7 @@ export const MyExperienceSection = () => {
         </div>
 
         {/* Count summary */}
-        <div
+        {/* <div
           className="mt-14 flex justify-center gap-10 text-center"
           style={{ animation: 'fadeSlideUp 0.7s ease-out 0.4s both' }}
         >
@@ -239,7 +239,7 @@ export const MyExperienceSection = () => {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
 
       <style>{`

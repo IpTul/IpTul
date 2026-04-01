@@ -45,7 +45,7 @@ export const AboutSection = () => {
 								<div className="text-left">
 									<h4 className="font-semibold text-lg">College</h4>
 									<p className="text-muted-foreground">
-										Studied at Samarinda State Polytechnic 2021 - 2025, majoring in D4 Information Technology. Graduated with honors.
+										Studied at Samarinda State Polytechnic 2021 - 2025, majoring in D4 Information Technology. Graduated with honors with 3.86 GPA.
 									</p>
 								</div>
 							</div>
