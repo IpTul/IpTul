@@ -1,33 +1,46 @@
-import { ArrowRight, ExternalLink, Github, Star, GitFork } from "lucide-react";
+import { ArrowRight, ExternalLink, Github, Star, GitFork } from 'lucide-react';
 
 const projects = [
   {
     id: 1,
-    title: "Brownies Browcious",
-    description:
-      "E-Commerce website for Brownies Browcious — built as my final project in college. Features product catalog, cart, and order management.",
-    image: "/projects/project1.jpg",
-    tags: ["React", "Node.js", "MongoDB"],
-    demoUrl: "https://brownies-browcious.store",
-    githubUrl: "https://github.com/IpTul/E-Commerce-Brownies",
-    type: "Full Stack",
-    year: "2023",
-    accent: "from-amber-500/20 to-orange-500/10",
-    tagColor: "bg-amber-500/10 text-amber-400 border-amber-500/20",
+    title: 'Cireng Juara',
+    description: 'Point of Sale system for a local snack shop.',
+    image: '/projects/project3.png',
+    tags: ['Laravel', 'React', 'MySQL'],
+    demoUrl: 'https://cirengjuarasmr.my.id',
+    githubUrl: 'https://github.com/IpTul/pos-cireng-juara',
+    type: 'Full Stack',
+    year: '2026',
+    accent: 'from-indigo-500/20 to-cyan-500/10',
+    tagColor: 'bg-indigo-500/10 text-indigo-400 border-indigo-500/20',
   },
   {
     id: 2,
-    title: "Catering Rosyanti",
+    title: 'Catering Rosyanti',
     description:
-      "E-Commerce website for a food catering business. Handles menu catalog, orders, and customer management.",
-    image: "/projects/project2.png",
-    tags: ["Laravel", "MySQL"],
-    demoUrl: "https://catering-rosyanti.store",
-    githubUrl: "https://github.com/IpTul/food-catering",
-    type: "Full Stack",
-    year: "2024",
-    accent: "from-blue-500/20 to-cyan-500/10",
-    tagColor: "bg-blue-500/10 text-blue-400 border-blue-500/20",
+      'E-Commerce website for a food catering business. Handles menu catalog, orders, and customer management.',
+    image: '/projects/project2.png',
+    tags: ['Laravel', 'MySQL'],
+    demoUrl: 'https://catering-rosyanti.store',
+    githubUrl: 'https://github.com/IpTul/food-catering',
+    type: 'Full Stack',
+    year: '2024',
+    accent: 'from-blue-500/20 to-cyan-500/10',
+    tagColor: 'bg-blue-500/10 text-blue-400 border-blue-500/20',
+  },
+  {
+    id: 3,
+    title: 'Brownies Browcious',
+    description:
+      'E-Commerce website for Brownies Browcious — built as my final project in college. Features product catalog, cart, and order management.',
+    image: '/projects/project1.jpg',
+    tags: ['React', 'Node.js', 'MongoDB'],
+    demoUrl: 'https://brownies-browcious.store',
+    githubUrl: 'https://github.com/IpTul/E-Commerce-Brownies',
+    type: 'Full Stack',
+    year: '2023',
+    accent: 'from-amber-500/20 to-orange-500/10',
+    tagColor: 'bg-amber-500/10 text-amber-400 border-amber-500/20',
   },
 ];
 
@@ -39,9 +52,11 @@ export const ProjectsSection = () => {
       <div className="absolute bottom-1/3 right-0 w-72 h-72 rounded-full bg-cyan-500/5 blur-[100px] pointer-events-none" />
 
       <div className="container mx-auto max-w-5xl relative z-10">
-
         {/* Header */}
-        <div className="text-center mb-14" style={{ animation: "fadeSlideUp 0.5s ease-out both" }}>
+        <div
+          className="text-center mb-14"
+          style={{ animation: 'fadeSlideUp 0.5s ease-out both' }}
+        >
           <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground/50 mb-3 font-medium">
             What I've built
           </p>
@@ -62,10 +77,14 @@ export const ProjectsSection = () => {
               className="group relative bg-card border border-border rounded-2xl overflow-hidden
                 hover:border-primary/30 hover:shadow-2xl hover:shadow-primary/5
                 transition-all duration-400 hover:-translate-y-1"
-              style={{ animation: `fadeSlideUp 0.5s ease-out ${index * 120}ms both` }}
+              style={{
+                animation: `fadeSlideUp 0.5s ease-out ${index * 120}ms both`,
+              }}
             >
               {/* Gradient accent overlay on hover */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${project.accent} opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-10`} />
+              <div
+                className={`absolute inset-0 bg-gradient-to-br ${project.accent} opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-10`}
+              />
 
               {/* Image */}
               <div className="relative overflow-hidden aspect-video bg-secondary/30">
@@ -89,7 +108,7 @@ export const ProjectsSection = () => {
 
                 {/* Hover action buttons on image */}
                 <div className="absolute inset-0 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
-                  {/* <a
+                  <a
                     href={project.demoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -97,7 +116,7 @@ export const ProjectsSection = () => {
                       hover:bg-primary hover:text-primary-foreground transition-colors duration-200 shadow-lg"
                   >
                     <ExternalLink size={13} /> Live Demo
-                  </a> */}
+                  </a>
                   <a
                     href={project.githubUrl}
                     target="_blank"
@@ -138,7 +157,7 @@ export const ProjectsSection = () => {
                     {project.type}
                   </span>
                   <div className="flex gap-2">
-                    {/* <a
+                    <a
                       href={project.demoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -146,7 +165,7 @@ export const ProjectsSection = () => {
                       title="Live Demo"
                     >
                       <ExternalLink size={15} />
-                    </a> */}
+                    </a>
                     <a
                       href={project.githubUrl}
                       target="_blank"
@@ -166,7 +185,7 @@ export const ProjectsSection = () => {
         {/* CTA */}
         <div
           className="text-center mt-12"
-          style={{ animation: "fadeSlideUp 0.5s ease-out 0.35s both" }}
+          style={{ animation: 'fadeSlideUp 0.5s ease-out 0.35s both' }}
         >
           <a
             href="https://github.com/IpTul"
