@@ -7,7 +7,7 @@ const projects = [
     description: 'Point of Sale system for a local snack shop.',
     image: '/projects/project3.png',
     tags: ['Laravel', 'React', 'MySQL'],
-    demoUrl: 'https://cirengjuarasmr.my.id',
+    demoUrl: '',
     githubUrl: 'https://github.com/IpTul/pos-cireng-juara',
     type: 'Full Stack',
     year: '2026',
